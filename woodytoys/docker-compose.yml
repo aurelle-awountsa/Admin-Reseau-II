@@ -1,0 +1,32 @@
+version: "3" # Version de Compose
+name: woodytoys # Nom du projet
+services:
+  web: # Nom du conteneur
+    image: nginx:alpine # Image du conteneur
+    links: # Liaison avec d'autres conteneurs
+    - db:database
+    ports: # Port h^ote -> Port conteneur
+    - 80:80
+    networks: # R´eseau associ´e
+    - private-net
+  db:
+    image: mysql:5.7
+    environment: # Variables d'environnements
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: database
+    MYSQL_USER: user
+    MYSQL_PASSWORD: password
+    volumes:
+    - db-data:/var/lib/mysql
+    networks:
+    - private-net
+  dns:
+    image: ubuntu/bind9
+    ports:
+    - 53:53/udp
+    - 53:53
+volumes: # D´efinition des volumes
+  db-data:
+networks:
+  private-net:
+  other-net: # Autres d´efinitions de r´eseaux
