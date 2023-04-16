@@ -11,18 +11,18 @@ $TTL  604800
             IN     MX   10     mail.l1-5.ephec-ti.be
            
 
-ns          IN      A          51.91.10.234
+ns          IN      A          51.38.188.116
 
             IN      MX   10    mail
 ;
 
-b2b         IN      A          51.91.10.234
+b2b         IN      A          51.38.188.116
 
-www         IN      A          51.91.10.234
+www         IN      A          51.38.188.116
 
 ;
 
-mail        IN      A          51.91.10.234
+mail        IN      A          51.38.188.116
 
 smtp        IN      CNAME      mail
 imap        IN      CNAME      mail
