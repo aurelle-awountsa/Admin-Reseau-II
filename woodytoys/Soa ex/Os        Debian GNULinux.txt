@@ -1,4 +1,0 @@
-Os:        ubuntu
-hostname : vps-e94b1c2f
-FQDN :     vps-e94b1c2f.vps.ovh.net
-ip:        51.91.9.171
