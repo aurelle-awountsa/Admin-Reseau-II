@@ -1,0 +1,16 @@
+$ORIGIN woody.intra.
+
+$TTL 86400      ; 1 day
+@               IN SOA  ns.woody.intra. siwar.l1-5.ephec-ti.be.(
+                                1          ; serial
+                                21600      ; refresh (6 hours) //ns esclave demande au ns maitre s'il y a du changement
+                                3600       ; retry (1 hour) //temps d'attente avant d'envoyer une nouvelle requete au ns maitre
+                                604800     ; expire (1 week)
+                                86400      ; minimum (1 day) //demande qque à d'autre ns de mettre en cache les infos pour la zone
+)
+
+@               IN      NS      ns.woody.intra.  //représente le serveur dns de la zone
+ns              IN      A       172.168.0.2
+www             IN      A       172.168.0.3
+resolver        IN      A       172.168.0.1
+db              IN      A       172.168.0.4
