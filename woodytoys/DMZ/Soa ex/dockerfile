@@ -9,7 +9,7 @@ RUN apt update && apt full-upgrade -y && \
 RUN sed -i 's/OPTIONS=.*/OPTIONS="-4 -u bind"/' /etc/default/bind9
 
 # copie des fichiers de configuration de la machine locale vers image docker
-COPY named.conf /etc/bind/ 
+COPY named.conf /etc/bind/named.conf
 COPY l1-5.ephec-ti.be /etc/bind/ 
 
 

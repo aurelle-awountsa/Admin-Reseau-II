@@ -10,8 +10,13 @@ WORKDIR /etc/bind
 
 COPY named.conf /etc/bind/named.conf
 COPY woody.intra /etc/bind/woody.intra
+
+RUN mkdir /var/log/named
+RUN chown bind:bind /var/log/named
+RUN touch /var/log/named/misc.log /var/log/named/query.log
+RUN chown bind:bind /var/log/named/*
+
 EXPOSE 53/udp 53/tcp
 
 
 
-CMD ["named", "-c", "/etc/bind/named.conf"]
