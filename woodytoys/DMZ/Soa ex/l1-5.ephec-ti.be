@@ -6,12 +6,12 @@ $TTL  604800
                                   2419200     ; Expire
                                   86400 )    ; Negative Cache TTL
 ;
-@            IN     NS          ns.l1-5.ephec-ti.be.
+l1-5.ephec-ti.be        IN     NS          ns.l1-5.ephec-ti.be.
 
 @           IN     MX   10     mail.l1-5.ephec-ti.be
            
 ;
-ns          IN      A          51.91.9.171
+ns.l1-5.ephec-ti.be          IN      A          51.91.9.171
 
 b2b         IN      A          51.91.9.171
 
