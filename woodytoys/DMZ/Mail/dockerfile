@@ -6,7 +6,13 @@ RUN apt update && apt full-upgrade -y && \
     apt install bind9 bind9utils dnsutils net-tools nano -y\
 RUN apt install apache2
 RUN apt install mysql-server
+RUN apt install mariadb-server -y \
+    && service mariadb start
 RUN apt install php libapache2-mod-php php-mysql
 #configurer apache pour fonctionner avec php
 RUN nano /etc/apache2/mods-enabled/dir.conf
+RUN mysql_secure_installation
+RUN systemctl restart apache2
+RUN nano /var/www/html/info.php
 
+RUN apt install postfix postfix-mysql -y

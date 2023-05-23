@@ -1,0 +1,17 @@
+$ORIGIN intranet.woody.
+
+$TTL 86400      ; 1 day
+@               IN SOA  ns.intranet.woody. siwar.student.ephec.be.(
+                                1          ; serial
+                                21600      ; refresh (6 hours)
+                                3600       ; retry (1 hour)
+                                604800     ; expire (1 week)
+                                86400      ; minimum (1 day)
+)
+
+@               IN      NS      ns.intranet.woody.
+ns              IN      A       172.162.0.2
+web             IN      A       172.162.0.3
+resolver        IN      A       172.162.0.1
+
+db              IN      A       172.162.3.1
