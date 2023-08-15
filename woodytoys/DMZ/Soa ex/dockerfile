@@ -26,4 +26,4 @@ EXPOSE 53/udp
 ENTRYPOINT [ "tail", "-F", "/dev/null" ]
 
 #demarrage du serveur dns 
-#CMD named c /etc/bind/named.conf -g
+#CMD named -c /etc/bind/named.conf -g
