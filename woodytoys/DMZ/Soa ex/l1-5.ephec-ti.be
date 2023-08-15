@@ -16,7 +16,6 @@ $TTL  604800
 @           IN      A          51.91.9.171
 ns          IN      A          51.91.9.171 
 
-            IN      MX   10    mail
 mail        IN      A          51.91.9.171
 
 b2b         IN      A          51.91.9.171
