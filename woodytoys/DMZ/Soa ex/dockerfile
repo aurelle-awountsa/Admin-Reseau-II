@@ -2,13 +2,16 @@ FROM ubuntu:bionic
 #image ubuntu
 
 #mise a jour image et installation de bind9 
+
 RUN apt update && apt full-upgrade -y && \
     apt install bind9 bind9utils dnsutils net-tools nano -y
 
 # activation IPv4
+
 RUN sed -i 's/OPTIONS=.*/OPTIONS="-4 -u bind"/' /etc/default/bind9
 
 # copie des fichiers de configuration de la machine locale vers image docker
+
 COPY named.conf /etc/bind/ 
 COPY l1-5.ephec-ti.be /etc/bind/ 
 
@@ -20,6 +23,7 @@ EXPOSE 953/udp
 EXPOSE 53/udp 
 
 
+ENTRYPOINT [ "tail", "-F", "/dev/null" ]
 
 #demarrage du serveur dns 
-CMD named c /etc/bind/named.conf -g
+#CMD named c /etc/bind/named.conf -g
