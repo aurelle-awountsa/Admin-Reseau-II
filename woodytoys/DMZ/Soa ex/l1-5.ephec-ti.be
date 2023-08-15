@@ -1,5 +1,5 @@
 $TTL  604800
-@     IN      SOA      ns.l1-5.ephec-ti.be  Groupe-5.ephec-ti.be(
+@     IN      SOA      ns.l1-5.ephec-ti.be.  Groupe-5.ephec-ti.be.(
                                  1          ; serial a incrementer a chaque fois qu'on fait une modification 
                                 21600      ; refresh (6 hours)
                                 3600       ; retry (1 hour)
@@ -11,7 +11,7 @@ $TTL  604800
 ;
 @           IN     NS          ns.l1-5.ephec-ti.be.
 
-            IN     MX     10   mail.l1-5.ephec-ti.be
+            IN     MX     10   mail.l1-5.ephec-ti.be.
 
 @           IN      A          51.91.9.171
 ns          IN      A          51.91.9.171 
