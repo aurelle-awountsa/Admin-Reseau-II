@@ -20,7 +20,7 @@ RUN touch /var/log/named/misc.log /var/log/named/query.log
 EXPOSE 53/tcp
 EXPOSE 53/udp
 
-CMD ["named" , "-c" , "/etc/bind/named.conf" , "-g"]
+CMD "named" , "-c" , "/etc/bind/named.conf" , "-g"
 
 
 
