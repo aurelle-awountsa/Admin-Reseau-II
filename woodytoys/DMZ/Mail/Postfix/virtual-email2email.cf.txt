@@ -1,0 +1,5 @@
+user = mailuser
+password = mailPWD
+dbname = maildb
+query = SELECT email FROM Users WHERE source='%s'
+hosts = 127.0.0.1

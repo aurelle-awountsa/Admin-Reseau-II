@@ -1,0 +1,5 @@
+user = mailuser
+password = mailPWD
+dbname = maildb
+query = SELECT 1 FROM Domains WHERE domain='%s'
+hosts = 127.0.0.1root@370c642f9c00:/etc/postfix#

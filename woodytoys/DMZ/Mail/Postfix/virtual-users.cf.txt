@@ -1,0 +1,5 @@
+user = mailuser
+password = mailPWD
+dbname = maildb
+query = SELECT foldermail FROM Users WHERE email='%s'
+hosts = 127.0.0.1

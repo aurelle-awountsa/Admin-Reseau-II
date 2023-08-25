@@ -1,0 +1,5 @@
+user = mailuser
+password = mailPWD
+dbname = maildb
+query = SELECT destination FROM Forwardings WHERE source='%s'
+host = 127.0.0.1
